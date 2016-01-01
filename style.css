@@ -64,7 +64,7 @@ body {
   font-family: 'verlag', sans-serif;
   font-weight: 400;
   line-height: 1.45;
-  color: #333;
+  color: #4a4a4a;
 }
 p {
 	margin-bottom: 1.3em;
@@ -103,17 +103,40 @@ a:hover {
 }
 .header {
   padding: 1rem 2.414em;
-  background-color: rgb(240, 240, 240);
   font-size: 1.3rem;
   line-height: 1.3rem;
+	background: rgb(245, 245, 245) url('images/header.svg') no-repeat;
+	background-size: cover;
+	height: 60vh;
+	min-height: 300px;
+	position: relative;
 }
 .header nav {
-  float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1em;
+}
+.crest {
+	width: 150px;
+	height: auto;
+}
+.header .caption {
+	position: relative;
+	top: 25%;
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
 }
 .header nav li {
   display: inline-block;
   margin: 0 0.5em;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+.header nav a {
+	color: white;
+	text-transform: uppercase;
 }
 main {
   clear: both;
@@ -125,10 +148,4 @@ footer {
 }
 footer li {
   display: inline-block;
-}
-footer li::before {
-	content: "- ";
-}
-footer li:first-child::before {
-	content: "";
 }
