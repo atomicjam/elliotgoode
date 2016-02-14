@@ -141,7 +141,11 @@ a:hover {
 main {
   clear: both;
   padding: 0 2.414em;
+	max-width: 675px;
+	text-align: left;
+	margin: 0 auto;
 }
+
 footer {
   padding: 2.414em;
 	text-align: center;
@@ -149,3 +153,111 @@ footer {
 footer li {
   display: inline-block;
 }
+
+/* browser mockup css */
+.device-wrap {
+  text-align: center;
+  background-color: rgb(132,166,143);
+	padding: 2rem 3rem;
+	margin: 2rem 0;
+}
+.sportscentre-wrap {
+	background-color: #09a6ec;
+}
+.parabolaarts-wrap {
+	background-color: #d4010b;
+}
+.venues-wrap {
+	background-color: #f9ac00;
+}
+.flourish-wrap {
+	background-color: #758db9;
+}
+.guild-wrap {
+	background-color: #caabcd;
+}
+.helpdesk-wrap {
+	background-color: #5c5c5b;
+}
+.clear {
+	clear: both;
+}
+.browser-window {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #fff;
+	box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.68);
+	margin: 1rem 0;
+}
+.mobile-window {
+	position: relative;
+  text-align: left;
+  width: 45%;
+  height: auto;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #fff;
+	box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.68);
+	margin: 1rem 0 1rem 0;
+	float: left;
+	margin-right: 2.5%;
+	margin-left: 2.5%;
+}
+
+.browser-window .top-bar, .mobile-window .top-bar {
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  border-top: thin solid #eee;
+  border-bottom: thin solid #ddd;
+  background: linear-gradient(#eee, #ddd);
+}
+.browser-window .circle, .mobile-window .circle {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+	margin-right: 3px;
+}
+.browser-window .circles, .mobile-window .circles {
+	margin: 3px 15px;
+}
+.browser-window .circle-red, .mobile-window .circle-red {
+	background-color: rgba(248, 72, 70, 0.7);
+}
+.browser-window .circle-yellow, .mobile-window .circle-yellow {
+	background-color: rgba(252, 182, 56, 0.7);
+}
+.browser-window .circle-green, .mobile-window .circle-green {
+	background-color: rgba(42, 201, 51, 0.7);
+}
+.browser-window .content, .mobile-window .content {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  display: inline-block;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+}
+.browser-img, .mobile-img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+.browser-window .sportscentre {
+	background-color: #383941;
+}
+.browser-window .parabolaarts {
+	background-color: #302928;
+}
+.browser-window .venues {
+	background-color: #312e29;
+}
+
+
+/* end browser mockup css */
