@@ -1,59 +1,10 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 /* Fonts */
-@font-face
-{
+@font-face {
     font-family: 'verlag';
-    src: url('fonts/verlag-light-webfont.eot?#iefix') format('embedded-opentype'), /* IE and Legacy Browsers */
-    url('fonts/verlag-light-webfont.woff') format('woff'), /* Modern Browsers */
-    url('fonts/verlag-light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('fonts/verlag-light-webfont.svg') format('svg'); /* Legacy iOS */
+    src: url('../fonts/verlag-light-webfont.eot?#iefix') format('embedded-opentype'), /* IE and Legacy Browsers */
+    url('../fonts/verlag-light-webfont.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/verlag-light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/verlag-light-webfont.svg') format('svg'); /* Legacy iOS */
 }
 /* Custom Css */
 html {
@@ -67,13 +18,17 @@ body {
   color: #4a4a4a;
 }
 p {
-	margin-bottom: 1.3em;
+  padding: 0 3rem;
+  max-width: 675px;
+  margin: 1.3em auto;
 }
 h1, h2, h3, h4, h5, h6 {
-  margin: 1.414em 0 0.5em;
+  margin: 1.414em auto 0.5rem auto;
   font-weight: inherit;
   line-height: 1.2;
 	text-transform: uppercase;
+  padding: 0 3rem;
+  max-width: 675px;
 }
 h1 {
 	margin-top: 1em;
@@ -105,9 +60,9 @@ a:hover {
   padding: 1rem 2.414em;
   font-size: 1.3rem;
   line-height: 1.3rem;
-	background: rgb(245, 245, 245) url('images/header.svg') no-repeat;
+	background: rgb(102, 130, 179) no-repeat;
 	background-size: cover;
-	height: 60vh;
+	height: 45vh;
 	min-height: 300px;
 	position: relative;
 }
@@ -140,12 +95,9 @@ a:hover {
 }
 main {
   clear: both;
-  padding: 0 2.414em;
-	max-width: 675px;
 	text-align: left;
 	margin: 0 auto;
 }
-
 footer {
   padding: 2.414em;
 	text-align: center;
@@ -153,13 +105,48 @@ footer {
 footer li {
   display: inline-block;
 }
-
+.device-wrap li {
+  color: #fff;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 675px;
+}
+.device-wrap h3 {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  max-width: 675px;
+  margin: 0 auto;  
+}
+.mobile-wrap {
+  max-width: 675px;
+  margin: 0 auto;
+}
+.client-link {
+  color: #fff;
+  text-transform: none;
+  letter-spacing: 0px;
+  text-align: right;
+  display: block;
+  margin-bottom: 1rem;
+}
+.client-link:hover {
+  text-decoration: none;
+}
+.client-link::before {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  content: '';
+  margin: 1rem 0 1rem 0;
+}
 /* browser mockup css */
 .device-wrap {
   text-align: center;
   background-color: rgb(132,166,143);
 	padding: 2rem 3rem;
-	margin: 2rem 0;
+	margin: 0;
 }
 .sportscentre-wrap {
 	background-color: #09a6ec;
@@ -185,17 +172,20 @@ footer li {
 .browser-window {
   text-align: left;
   width: 100%;
+  max-width: 675px;
   height: auto;
   display: inline-block;
   border-radius: 5px;
   background-color: #fff;
 	box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.68);
 	margin: 1rem 0;
+  clear: left;
 }
 .mobile-window {
 	position: relative;
   text-align: left;
-  width: 45%;
+  width: 48%;
+  max-width: 345px;
   height: auto;
   display: inline-block;
   border-radius: 5px;
@@ -203,10 +193,10 @@ footer li {
 	box-shadow: 7px 7px 15px 0px rgba(50, 50, 50, 0.68);
 	margin: 1rem 0 1rem 0;
 	float: left;
-	margin-right: 2.5%;
-	margin-left: 2.5%;
 }
-
+.mobile-window:first-of-type {
+	margin-right: 4%;
+}
 .browser-window .top-bar, .mobile-window .top-bar {
   height: 30px;
   border-radius: 5px 5px 0 0;
@@ -258,6 +248,4 @@ footer li {
 .browser-window .venues {
 	background-color: #312e29;
 }
-
-
 /* end browser mockup css */
